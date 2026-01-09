@@ -8,20 +8,20 @@
 }
 
 :root {
-  /* Atlas Brand Colors */
+  /* Atlas Brand Colors - White & Blue Theme */
   --primary: #1E88E5;
   --primary-dark: #1565C0;
   --primary-light: #42A5F5;
-  --secondary: #E07B39;
-  --accent-yellow: #C4A935;
-  --accent-green: #4CAF50;
-  --accent-purple: #7C4DFF;
-  --dark: #1a1a1a;
-  --gray: #718096;
-  --light-gray: #f5f5f5;
+  --secondary: #64B5F6;
+  --accent-yellow: #90CAF9;
+  --accent-green: #2196F3;
+  --accent-purple: #1976D2;
+  --dark: #01579B;
+  --gray: #90CAF9;
+  --light-gray: #E3F2FD;
   --white: #ffffff;
-  --text-dark: #1a1a1a;
-  --text-light: #666666;
+  --text-dark: #01579B;
+  --text-light: #455A64;
 }
 
 html.lenis, html.lenis body {
