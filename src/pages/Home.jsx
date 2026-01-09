@@ -1,10 +1,7 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import purpleImg from '../assets/purple.png'
-import * as THREE from 'three'
-import FOG from 'vanta/dist/vanta.fog.min'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -104,37 +101,6 @@ const testimonials = [
 
 
 export default function Home() {
-  const vantaRef = useRef(null)
-  const [vantaEffect, setVantaEffect] = useState(null)
-
-  useEffect(() => {
-    if (!vantaEffect) {
-      try {
-        setVantaEffect(FOG({
-          el: vantaRef.current,
-          THREE: THREE,
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.00,
-          minWidth: 200.00,
-          highlightColor: 0x0D47A1,
-          midtoneColor: 0xffffff,
-          lowlightColor: 0xffffff,
-          baseColor: 0xffffff,
-          blurFactor: 0.69,
-          speed: 2.00,
-          zoom: 0.50
-        }))
-      } catch (error) {
-        console.error("Vanta error:", error)
-      }
-    }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy()
-    }
-  }, [vantaEffect])
-
   useEffect(() => {
     const heroTl = gsap.timeline({ delay: 0.5 })
     heroTl
@@ -293,7 +259,7 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="section hero">
-        <div className="hero-bg" ref={vantaRef}></div>
+        <div className="hero-bg"></div>
         <div className="hero-content">
           <p className="hero-tag">أطلس للمنزلية والكهرومنزلية والتحف</p>
           <h1 className="hero-title">
