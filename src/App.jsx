@@ -81,7 +81,7 @@ function App() {
               <img src={logo} alt="ATLAS أطلس" className="logo-img" style={{ height: '50px' }} />
             </Link>
             <p className="footer-desc">
-              وجهتك الأولى لكل ما يحتاجه منزلك من أناقة وجودة. نجمع بين التكنولوجيا الحديثة والتصاميم العصرية لنقدم لك تجربة استثنائية.
+              شركة أطلس لإستيراد المواد الكهربائية والمنزلية. نجمع بين التكنولوجيا الحديثة والجودة العالية لنقدم لك تجربة استثنائية.
             </p>
           </div>
           
@@ -99,7 +99,7 @@ function App() {
             <h4>الأقسام</h4>
             <ul className="footer-links-list">
               <li><Link to="/products">أجهزة المطبخ</Link></li>
-              <li><Link to="/products">تحف وديكور</Link></li>
+              <li><Link to="/products">أجهزة كهربائية</Link></li>
               <li><Link to="/products">إضاءة حديثة</Link></li>
               <li><Link to="/products">أدوات منزلية</Link></li>
             </ul>
