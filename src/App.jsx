@@ -78,9 +78,11 @@ function App() {
       <footer className="footer-rich">
         <div className="footer-grid">
           <div className="footer-col">
-            <Link to="/" className="logo" style={{ marginBottom: '1.5rem' }}>
-              <img src={logo} alt="ATLAS أطلس" className="logo-img" style={{ height: '50px' }} />
-            </Link>
+            <div style={{ marginBottom: '3.5rem', display: 'block' }}>
+              <Link to="/" className="logo" style={{ display: 'inline-block' }}>
+                <img src={logo} alt="ATLAS أطلس" className="logo-img" style={{ height: '50px' }} />
+              </Link>
+            </div>
             <p className="footer-desc">
               شركة أطلس لإستيراد المواد الكهربائية والمنزلية. نجمع بين التكنولوجيا الحديثة والجودة العالية لنقدم لك تجربة استثنائية.
             </p>
