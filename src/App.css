@@ -35,7 +35,7 @@
 
 .nav-links {
   display: flex;
-  gap: 4rem;
+  gap: 8rem;
   list-style: none;
 }
 
@@ -90,6 +90,16 @@
   width: 50%;
   height: 100%;
   background: radial-gradient(circle at 70% 30%, rgba(30, 136, 229, 0.1) 0%, transparent 50%);
+}
+
+@media (max-width: 768px) {
+  .hero-bg {
+    background: linear-gradient(180deg, rgba(30, 136, 229, 0.03) 0%, rgba(255,255,255,1) 100%);
+  }
+  
+  .hero-bg::after {
+    display: none;
+  }
 }
 
 .hero-content {
@@ -958,7 +968,7 @@
 
 @media (max-width: 768px) {
   .nav-links {
-    gap: 0.5rem;
+    gap: 2rem;
   }
   
   .nav-links a {
@@ -977,7 +987,7 @@
   }
   
   .nav-links {
-    gap: 0.3rem;
+    gap: 1.5rem;
   }
   
   .nav-links a {
