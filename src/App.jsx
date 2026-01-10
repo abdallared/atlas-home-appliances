@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -14,6 +14,7 @@ gsap.registerPlugin(ScrollTrigger)
 function App() {
   const containerRef = useRef(null)
   const location = useLocation()
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -61,10 +62,22 @@ function App() {
         <Link to="/" className="logo">
           <img src={logo} alt="ATLAS أطلس" className="logo-img" />
         </Link>
-        <ul className="nav-links">
-          <li><Link to="/products">المنتجات</Link></li>
-          <li><Link to="/#features">مميزاتنا</Link></li>
-          <li><Link to="/#contact">تواصل معنا</Link></li>
+        
+        {/* Mobile Menu Button */}
+        <button 
+          className={`mobile-menu-btn ${mobileMenuOpen ? 'open' : ''}`}
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <ul className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
+          <li><Link to="/products" onClick={() => setMobileMenuOpen(false)}>المنتجات</Link></li>
+          <li><Link to="/#features" onClick={() => setMobileMenuOpen(false)}>مميزاتنا</Link></li>
+          <li><Link to="/#contact" onClick={() => setMobileMenuOpen(false)}>تواصل معنا</Link></li>
         </ul>
       </nav>
 
