@@ -967,6 +967,10 @@
 }
 
 @media (max-width: 768px) {
+  .hero-content {
+    margin-top: -80px;
+  }
+  
   .nav-links {
     gap: 2rem;
   }
