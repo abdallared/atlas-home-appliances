@@ -62,14 +62,6 @@ function App() {
           <img src={logo} alt="ATLAS أطلس" className="logo-img" />
         </Link>
         
-        {/* Mobile Menu Button */}
-        <input type="checkbox" id="mobile-menu-toggle" className="mobile-menu-checkbox" />
-        <label htmlFor="mobile-menu-toggle" className="mobile-menu-btn" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-        
         <ul className="nav-links">
           <li><Link to="/products">المنتجات</Link></li>
           <li><Link to="/#features">مميزاتنا</Link></li>
