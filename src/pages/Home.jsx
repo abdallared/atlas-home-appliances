@@ -169,36 +169,6 @@ export default function Home() {
       }
     )
 
-    // About animation
-    gsap.fromTo('.about-content',
-      { opacity: 0, x: 50 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.about-section',
-          start: 'top 70%',
-        }
-      }
-    )
-
-    gsap.fromTo('.about-image',
-      { opacity: 0, x: -50 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        delay: 0.2,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.about-section',
-          start: 'top 70%',
-        }
-      }
-    )
-
     // Stats animation
     gsap.fromTo('.stat-item',
       { opacity: 0, scale: 0.5 },
