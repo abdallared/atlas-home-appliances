@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import logoImg from '../assets/logo.png'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -231,7 +232,7 @@ export default function Home() {
         <div className="hero-content">
           <p className="hero-tag">شركة أطلس لإستيراد المواد الكهربائية والمنزلية</p>
           <h1 className="hero-title">
-            <strong>Atlas</strong> أطلس<br />
+            <img src={logoImg} alt="Atlas Logo" className="hero-logo" /><br />
             <span className="hero-title-sub">Home Appliances</span>
           </h1>
           <p className="hero-subtitle">
@@ -271,11 +272,76 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div style={{ textAlign: 'center', marginTop: '4rem' }}>
-            <Link to="/products" className="product-btn" style={{ padding: '0.8rem 3rem' }}>
-              منتجاتنا <span>←</span>
-            </Link>
+      {/* Brands Marquee Section */}
+      <section style={{ 
+        background: 'var(--white)', 
+        padding: '4rem 0',
+        overflow: 'hidden',
+        borderTop: '1px solid var(--light-gray)',
+        borderBottom: '1px solid var(--light-gray)'
+      }}>
+        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+          <p className="section-tag">شركاؤنا</p>
+          <h2 className="products-title">نتعاون مع <strong>أفضل العلامات التجارية</strong></h2>
+        </div>
+        
+        <div style={{ 
+          display: 'flex',
+          overflow: 'hidden',
+          userSelect: 'none',
+          gap: '4rem',
+          maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)'
+        }}>
+          <div style={{
+            display: 'flex',
+            gap: '4rem',
+            animation: 'scroll 30s linear infinite',
+            paddingRight: '4rem'
+          }}>
+            {/* Brand logos - repeat twice for seamless loop */}
+            {[...Array(2)].map((_, setIndex) => (
+              <div key={setIndex} style={{ display: 'flex', gap: '4rem', alignItems: 'center' }}>
+                <div style={{ minWidth: '150px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: 0.6, transition: 'opacity 0.3s' }}>
+                  <svg width="140" height="50" viewBox="0 0 200 60" fill="none">
+                    <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fill="#1E88E5" fontSize="24" fontWeight="700" fontFamily="Arial">SAMSUNG</text>
+                  </svg>
+                </div>
+                
+                <div style={{ minWidth: '150px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: 0.6, transition: 'opacity 0.3s' }}>
+                  <svg width="140" height="50" viewBox="0 0 200 60" fill="none">
+                    <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fill="#E60012" fontSize="24" fontWeight="700" fontFamily="Arial">LG</text>
+                  </svg>
+                </div>
+                
+                <div style={{ minWidth: '150px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: 0.6, transition: 'opacity 0.3s' }}>
+                  <svg width="140" height="50" viewBox="0 0 200 60" fill="none">
+                    <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fill="#0066B2" fontSize="24" fontWeight="700" fontFamily="Arial">PHILIPS</text>
+                  </svg>
+                </div>
+                
+                <div style={{ minWidth: '150px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: 0.6, transition: 'opacity 0.3s' }}>
+                  <svg width="140" height="50" viewBox="0 0 200 60" fill="none">
+                    <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fill="#ED1C24" fontSize="24" fontWeight="700" fontFamily="Arial">TOSHIBA</text>
+                  </svg>
+                </div>
+                
+                <div style={{ minWidth: '150px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: 0.6, transition: 'opacity 0.3s' }}>
+                  <svg width="140" height="50" viewBox="0 0 200 60" fill="none">
+                    <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fill="#003DA5" fontSize="24" fontWeight="700" fontFamily="Arial">PANASONIC</text>
+                  </svg>
+                </div>
+                
+                <div style={{ minWidth: '150px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: 0.6, transition: 'opacity 0.3s' }}>
+                  <svg width="140" height="50" viewBox="0 0 200 60" fill="none">
+                    <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fill="#000000" fontSize="24" fontWeight="700" fontFamily="Arial">SONY</text>
+                  </svg>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

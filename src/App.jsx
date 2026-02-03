@@ -58,10 +58,6 @@ function App() {
       
       {/* Navbar */}
       <nav className="navbar">
-        <Link to="/" className="logo">
-          <img src={logo} alt="ATLAS أطلس" className="logo-img" />
-        </Link>
-        
         <ul className="nav-links">
           <li><Link to="/products">المنتجات</Link></li>
           <li><Link to="/#features">مميزاتنا</Link></li>

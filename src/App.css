@@ -131,6 +131,14 @@
   color: var(--text-dark);
 }
 
+.hero-logo {
+  height: clamp(80px, 15vw, 150px);
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0.5rem;
+}
+
 .hero-title strong {
   font-weight: 700;
   color: var(--primary);
@@ -222,6 +230,11 @@
   50% { transform: scaleY(1); transform-origin: top; }
   51% { transform-origin: bottom; }
   100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
 }
 
 /* About Section */
